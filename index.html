@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f5f7">
+<title>제주 학회 출장 · 2026.10.28–30</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --bg:#f4f5f7; --card:#ffffff; --ink:#191f28; --sub:#4e5968; --mute:#8b95a1; --faint:#b0b8c1;
+  --line:#eef0f3; --fill:#f2f4f6; --fill-2:#e8ebee;
+  --acc:#ff6a13; --acc-soft:#fff1e8; --acc-ink:#d9530a;
+  --blue:#3182f6; --blue-soft:#e8f3ff; --green:#14a35b; --green-soft:#e6f7ee; --red:#f04452;
+  --r:22px; --safe-t:env(safe-area-inset-top,0px); --safe-b:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#101215;--card:#1b1e23;--ink:#f2f4f6;--sub:#b0b8c1;--mute:#7e8893;--faint:#5b636d;
+    --line:#262a30;--fill:#24282e;--fill-2:#2e333a;--acc-soft:#3a2416;--acc-ink:#ff8a45;--blue-soft:#17263b;--green-soft:#123222}
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;
+  font-feature-settings:"tnum";overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit;border:none;background:none}
+button{cursor:pointer}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px}
+
+/* ── views ── */
+.view{display:none;min-height:100vh;padding-bottom:calc(40px + var(--safe-b))}
+.view.on{display:block;animation:in .28s cubic-bezier(.2,.8,.2,1)}
+#home.on{animation:fade .25s ease}
+@keyframes in{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+/* ── home ── */
+.h-top{display:flex;align-items:center;justify-content:space-between;padding:calc(18px + var(--safe-t)) 4px 0}
+.h-top .lbl{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--mute);letter-spacing:.02em}
+.h-top .lbl i{width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.icon-btn{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:var(--sub)}
+.icon-btn:active{background:var(--fill-2)}
+.icon-btn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero{padding:44px 4px 30px}
+.dday{display:inline-block;font-size:13px;font-weight:700;color:var(--acc-ink);background:var(--acc-soft);padding:5px 11px;border-radius:999px}
+.hero h1{font-size:36px;font-weight:800;letter-spacing:-.04em;line-height:1.2;margin:16px 0 8px}
+.hero p{font-size:15px;color:var(--sub)}
+.hero .ppl{font-size:14px;color:var(--mute);margin-top:4px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--card);border-radius:var(--r);padding:18px 18px 16px;min-height:142px;display:flex;flex-direction:column;
+  transition:transform .15s}
+.tile:active{transform:scale(.97)}
+.tile .ti{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:auto}
+.tile .ti svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tile b{font-size:17px;font-weight:700;margin-top:18px;letter-spacing:-.02em}
+.tile span{font-size:13px;color:var(--mute);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c1{background:#fff4e5;color:#f08a00}.c2{background:#eaf2ff;color:#3182f6}.c3{background:#e9f8f0;color:#14a35b}
+.c4{background:#f3edff;color:#7c4dff}.c5{background:#ffecee;color:#f04452}.c6{background:#eef1f4;color:#4e5968}
+@media (prefers-color-scheme:dark){.c1,.c2,.c3,.c4,.c5,.c6{background:var(--fill)}}
+.home-foot{text-align:center;font-size:12px;color:var(--faint);padding:28px 0 0}
+
+/* ── sub page header ── */
+.bar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px)}
+.bar .in{max-width:520px;margin:0 auto;display:flex;align-items:center;gap:2px;padding:calc(8px + var(--safe-t)) 8px 8px}
+.bar h2{font-size:17px;font-weight:700}
+.page-t{font-size:26px;font-weight:800;letter-spacing:-.035em;padding:8px 4px 2px}
+.page-s{font-size:14px;color:var(--mute);padding:0 4px}
+
+/* ── shared ── */
+.card{background:var(--card);border-radius:var(--r);margin-top:12px;overflow:hidden}
+.pad{padding:22px 20px}
+.sub-h{font-size:15px;font-weight:700;padding:26px 4px 0;color:var(--sub)}
+.note{margin-top:12px;padding:0 4px;font-size:13px;color:var(--mute);line-height:1.55}
+.kv{display:grid;grid-template-columns:72px 1fr;gap:12px;font-size:14px}
+.kv .k{color:var(--mute)}
+.kv .v{font-weight:500;word-break:keep-all}
+.kv .v small{display:block;color:var(--mute);font-weight:400;font-size:13px}
+.tags{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.tags span{font-size:12px;font-weight:600;color:var(--sub);background:var(--fill);border-radius:8px;padding:5px 9px}
+.row{display:flex;align-items:center;gap:14px;padding:15px 20px}
+.row+.row{border-top:1px solid var(--line)}
+.row .ic{width:40px;height:40px;border-radius:12px;background:var(--fill);display:grid;place-items:center;flex-shrink:0}
+.row .ic svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.row .tx{flex:1;min-width:0}
+.row .tx b{display:block;font-size:15px;font-weight:600}
+.row .tx span{font-size:13px;color:var(--mute)}
+.chev{width:16px;height:16px;stroke:var(--faint);fill:none;stroke-width:2;flex-shrink:0}
+
+/* weather */
+.wd{display:flex;align-items:center;gap:16px;padding:20px}
+.wd+.wd{border-top:1px solid var(--line)}
+.wd svg{width:44px;height:44px;flex-shrink:0;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.wd svg .sun{stroke:var(--acc)} .wd svg .rain{stroke:var(--blue)}
+.wd .dn{flex:1}
+.wd .dn b{display:block;font-size:16px;font-weight:700}
+.wd .dn span{font-size:13px;color:var(--mute)}
+.wd .tp{text-align:right}
+.wd .tp b{font-size:22px;font-weight:700}
+.wd .tp em{font-style:normal;font-size:16px;color:var(--mute);font-weight:500;margin-left:4px}
+.wd .tp div{font-size:12px;color:var(--blue)}
+.wx-src{font-size:12px;color:var(--faint);text-align:right;padding:10px 4px 0}
+
+/* schedule */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--fill-2);border-radius:14px;padding:4px;margin-top:16px}
+.seg button{border-radius:11px;padding:9px 4px 8px;text-align:center;transition:background .2s}
+.seg .d{display:block;font-size:15px;font-weight:700}
+.seg .w{display:block;font-size:12px;color:var(--mute);font-weight:500}
+.seg button.on{background:var(--card);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.seg button.today .d::after{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--acc);margin-left:4px;vertical-align:4px}
+.day-h{display:flex;align-items:center;justify-content:space-between;padding:20px 20px 6px}
+.day-h b{font-size:17px;font-weight:700}
+.day-h span{font-size:13px;color:var(--mute)}
+.warn{margin:8px 20px 6px;padding:12px 14px;border-radius:14px;background:var(--acc-soft);color:var(--acc-ink);font-size:13px;line-height:1.55;font-weight:500}
+.tl{padding:8px 0 14px}
+.ev{display:grid;grid-template-columns:60px 16px 1fr;padding:0 20px}
+.ev .tm{font-size:15px;font-weight:600;padding-top:11px}
+.ev .ln{position:relative;display:flex;justify-content:center}
+.ev .ln::before{content:"";position:absolute;top:0;bottom:0;width:1.5px;background:var(--line)}
+.ev:first-child .ln::before{top:19px}
+.ev:last-child .ln::before{bottom:auto;height:19px}
+.ev .dt{position:relative;margin-top:15px;width:9px;height:9px;border-radius:50%;background:var(--card);border:2px solid var(--faint)}
+.ev.key .dt{border-color:var(--ink);background:var(--ink)}
+.ev.fly .dt,.ev.car .dt{border-color:var(--acc);background:var(--acc)}
+.ev .bd{padding:10px 0 12px 12px;min-width:0}
+.ev .w{font-size:15px;font-weight:600;line-height:1.45}
+.ev .n{font-size:13px;color:var(--mute);margin-top:2px}
+.ev .chip{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:2px 6px;margin-right:6px;vertical-align:1px}
+.ev.fly .chip,.ev.car .chip{background:var(--acc-soft);color:var(--acc-ink)}
+.ev.key .chip{background:var(--fill);color:var(--sub)}
+.ev.past{opacity:.38}
+.ev.now .tm{color:var(--acc)}
+.ev.now .dt{box-shadow:0 0 0 5px var(--acc-soft);border-color:var(--acc);background:var(--acc)}
+
+/* transport: segmented inner */
+.fl-top{padding:20px 20px 18px}
+.fl-meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mute);font-weight:500}
+.fl-meta .dir{color:var(--ink);font-weight:700}
+.fl-meta .no{margin-left:auto;color:var(--ink);font-weight:700;letter-spacing:.02em}
+.route{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:14px;margin-top:16px}
+.route .c{font-size:30px;font-weight:800;line-height:1}
+.route .t{font-size:15px;font-weight:600;margin-top:8px}
+.route .p{font-size:12px;color:var(--mute)}
+.route .r{text-align:right}
+.route .mid{align-self:center;display:flex;flex-direction:column;align-items:center;gap:4px;margin-top:-18px}
+.route .mid .bar2{position:relative;width:100%;height:1.5px;background:var(--line)}
+.route .mid .bar2::after{content:"";position:absolute;right:-1px;top:-3px;width:7px;height:7px;border-top:1.5px solid var(--faint);border-right:1.5px solid var(--faint);transform:rotate(45deg)}
+.route .mid span{font-size:12px;color:var(--mute)}
+.fl-car{font-size:12px;color:var(--mute);margin-top:14px}
+.perf{position:relative;height:1px;margin:0 20px;border-top:1.5px dashed var(--line)}
+.perf::before,.perf::after{content:"";position:absolute;top:-10px;width:18px;height:18px;border-radius:50%;background:var(--bg)}
+.perf::before{left:-30px}.perf::after{right:-30px}
+.pax{display:flex;align-items:center;gap:12px;padding:14px 20px}
+.pax+.pax{border-top:1px solid var(--line)}
+.seat{width:46px;height:46px;border-radius:14px;background:var(--fill);display:grid;place-items:center;flex-shrink:0;font-size:15px;font-weight:800}
+.seat.biz{background:var(--acc-soft);color:var(--acc-ink)}
+.pax .who{flex:1;min-width:0}
+.pax .nm{font-size:16px;font-weight:700}
+.pax .ds{font-size:13px;color:var(--mute)}
+.pax .ds b{font-weight:600;color:var(--acc-ink)}
+.acts{display:flex;gap:6px}
+.btn{font-size:13px;font-weight:600;border-radius:10px;padding:9px 11px;white-space:nowrap;line-height:1;display:inline-flex;align-items:center}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:var(--fill);color:var(--sub)}
+.btn.ghost.na,.btn.bp.checking,.btn.bp.pending{background:var(--fill);color:var(--faint)}
+.btn.bp.ready{background:var(--ink);color:var(--card)}
+.sm-tg{width:100%;display:flex;align-items:center;justify-content:center;gap:6px;padding:14px;border-top:1px solid var(--line);font-size:13px;font-weight:600;color:var(--sub)}
+.sm-tg svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .2s}
+.sm-tg.open svg{transform:rotate(180deg)}
+.sm{display:none;padding:4px 20px 22px}
+.sm.open{display:block}
+.cab{margin-top:14px}
+.cab-n{font-size:12px;font-weight:600;color:var(--mute);margin-bottom:8px;text-align:center}
+.grid{display:flex;flex-direction:column;gap:5px;align-items:center}
+.grow{display:flex;gap:5px;align-items:center}
+.grow .rn{width:22px;font-size:11px;color:var(--faint);text-align:center}
+.grow .gap{width:12px}
+.st{width:26px;height:26px;border-radius:7px;background:var(--fill);font-size:10px;font-weight:600;color:var(--faint);display:grid;place-items:center}
+.st.me{background:var(--ink);color:var(--card);font-weight:700}
+.st.me.biz{background:var(--acc);color:#fff}
+.grow.hd .st{background:none;height:16px}
+.sm-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;margin-top:14px;font-size:12px;color:var(--sub)}
+
+/* rental */
+.car-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.car-head .nm{font-size:20px;font-weight:700;letter-spacing:-.03em}
+.car-head .sb{font-size:13px;color:var(--mute);margin-top:2px}
+.plate{margin-top:18px;border-radius:16px;background:var(--fill);padding:18px;text-align:center}
+.plate .lb{font-size:12px;color:var(--mute);font-weight:600}
+.plate .num{display:inline-block;margin-top:8px;font-size:28px;font-weight:800;letter-spacing:.02em;padding:6px 18px;border-radius:10px;
+  background:#fff;color:#111;border:2.5px solid #111;box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.plate .tbd{display:inline-block;margin-top:8px;font-size:15px;font-weight:600;color:var(--faint);padding:10px 18px;border-radius:10px;border:1.5px dashed var(--faint)}
+.plate .up{font-size:11px;color:var(--faint);margin-top:8px}
+.rent-t{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.rent-t>div{padding:16px 20px}
+.rent-t>div+div{border-left:1px solid var(--line)}
+.rent-t .k{font-size:12px;color:var(--mute);font-weight:500}
+.rent-t .v{font-size:16px;font-weight:700;margin-top:3px}
+.rent-t .s{font-size:12px;color:var(--mute)}
+.copy{font-size:12px;font-weight:600;color:var(--blue);margin-left:6px}
+
+/* lodging */
+.lg-n{font-size:20px;font-weight:700;letter-spacing:-.03em}
+.lg-a{font-size:13px;color:var(--mute);margin-top:2px}
+.ck{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.ck>div{padding:16px 20px}
+.ck>div+div{border-left:1px solid var(--line)}
+.ck .k{font-size:12px;color:var(--mute);font-weight:500}
+.ck .v{font-size:16px;font-weight:700;margin-top:3px}
+.ck .s{font-size:12px;color:var(--mute)}
+.room{display:flex;align-items:center;justify-content:space-between;padding:15px 20px;border-top:1px solid var(--line)}
+.room .k{font-size:13px;color:var(--mute);font-weight:500}
+.room .v{font-size:15px;font-weight:600}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 20px 20px;padding:15px;border-radius:14px;background:#03c75a;color:#fff;font-size:15px;font-weight:700}
+.cta .nv{width:20px;height:20px;border-radius:5px;background:#fff;color:#03c75a;display:grid;place-items:center;font-size:12px;font-weight:900}
+
+/* settings */
+.field{padding:18px 20px}
+.field+.field{border-top:1px solid var(--line)}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--sub);margin-bottom:8px}
+.field input{width:100%;background:var(--fill);border-radius:12px;padding:14px;font-size:17px;font-weight:600;outline:none;border:1.5px solid transparent}
+.field input:focus{border-color:var(--blue);background:var(--card)}
+.field input.sm2{font-size:14px;font-weight:500}
+.field .hint{font-size:12px;color:var(--mute);margin-top:8px;line-height:1.55}
+.primary{display:block;width:calc(100% - 40px);margin:0 20px 20px;padding:15px;border-radius:14px;background:var(--blue);color:#fff;font-size:16px;font-weight:700;text-align:center}
+.primary:disabled{opacity:.5}
+.primary.dark{background:var(--ink);color:var(--card)}
+.status{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;padding:14px 20px;border-top:1px solid var(--line)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--faint)}
+.status.ok i{background:var(--green)} .status.ok{color:var(--green)}
+.status.no i{background:var(--acc)} .status.no{color:var(--acc-ink)}
+details.help{padding:0 20px 18px;font-size:13px;color:var(--sub)}
+details.help summary{cursor:pointer;font-weight:600;color:var(--blue);list-style:none;padding:4px 0}
+details.help ol{padding:8px 0 0 18px;line-height:1.7;color:var(--mute)}
+details.help b{color:var(--sub)}
+
+/* toast + lightbox */
+.toast{position:fixed;left:50%;bottom:calc(24px + var(--safe-b));z-index:300;transform:translate(-50%,12px);opacity:0;pointer-events:none;
+  width:calc(100% - 32px);max-width:488px;background:#191f28;color:#fff;border-radius:16px;padding:14px 16px;font-size:14px;line-height:1.5;
+  box-shadow:0 12px 32px rgba(0,0,0,.2);transition:.25s cubic-bezier(.2,.8,.2,1)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast b{display:block;font-weight:700;margin-bottom:1px}
+.toast span{color:#b0b8c1;font-size:13px}
+.lb{position:fixed;inset:0;z-index:200;display:none;flex-direction:column;background:rgba(10,12,15,.94)}
+.lb.open{display:flex}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;padding-top:calc(14px + var(--safe-t));color:#fff}
+.lb-name{font-weight:700;font-size:16px}
+.lb-close{background:rgba(255,255,255,.12);color:#fff;border-radius:10px;font-size:14px;font-weight:600;padding:8px 14px}
+.lb-stage{flex:1;position:relative;overflow:hidden;touch-action:none;display:flex;align-items:center;justify-content:center}
+.lb-stage img{max-width:100%;max-height:100%;border-radius:12px;background:#fff;transform-origin:center;will-change:transform;user-select:none;-webkit-user-drag:none;touch-action:none}
+.lb-hint{text-align:center;color:rgba(255,255,255,.5);font-size:12px;padding:12px 16px calc(16px + var(--safe-b))}
+</style>
+</head>
+<body>
+
+<!-- ═════════ HOME ═════════ -->
+<main class="view" id="home">
+  <div class="wrap">
+    <div class="h-top">
+      <span class="lbl"><i></i>JEJU · 2026.10.28 – 10.30</span>
+      <a class="icon-btn" href="#settings" aria-label="설정"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></a>
+    </div>
+    <div class="hero">
+      <span class="dday" id="dday"></span>
+      <h1>제주 학회 출장</h1>
+      <p>2026 한국국방기술학회 추계학술대회</p>
+      <p class="ppl">조성식 · 성호용 · 신지윤 · 김현준</p>
+    </div>
+    <nav class="tiles" id="tiles"></nav>
+    <div class="home-foot">신협제주연수원 · 제주시 애월읍</div>
+  </div>
+</main>
+
+<!-- ═════════ WEATHER ═════════ -->
+<section class="view" id="weather" data-title="날씨">
+  <div class="wrap">
+    <div class="page-t">날씨</div><div class="page-s">애월 기준 · 3일 예보</div>
+    <div class="card" id="wxList"></div>
+    <div class="wx-src" id="wxSrc">Open-Meteo</div>
+  </div>
+</section>
+
+<!-- ═════════ SCHEDULE ═════════ -->
+<section class="view" id="schedule" data-title="일정">
+  <div class="wrap">
+    <div class="page-t">일정</div><div class="page-s">2박 3일 · 10.28 – 10.30</div>
+    <div class="seg" id="seg"></div>
+    <div class="card" id="day"></div>
+  </div>
+</section>
+
+<!-- ═════════ TRANSPORT ═════════ -->
+<section class="view" id="transport" data-title="교통">
+  <div class="wrap">
+    <div class="page-t">교통</div><div class="page-s">항공 2편 · 렌터카 1대</div>
+    <div class="sub-h">렌터카</div>
+    <div class="card" id="rental"></div>
+    <div class="sub-h">항공편</div>
+    <div id="flights"></div>
+    <p class="note">E-티켓은 예약 증빙으로 언제든 열립니다. 탑승권은 출발 24시간 전부터 등록되며, 그 전에는 ‘발권 전’으로 표시됩니다.</p>
+  </div>
+</section>
+
+<!-- ═════════ LODGE ═════════ -->
+<section class="view" id="lodge" data-title="숙소">
+  <div class="wrap">
+    <div class="page-t">숙소</div><div class="page-s">애월 · 2박</div>
+    <div class="card" id="lodgeCard"></div>
+    <div class="sub-h">예약 · 결제</div>
+    <div class="card" id="lodgeInfo"></div>
+    <div class="sub-h">취소 규정</div>
+    <div class="card" id="lodgeCancel"></div>
+    <p class="note">입실(10.28) 기준 · 수수료는 총 객실료 대비입니다.</p>
+  </div>
+</section>
+
+<!-- ═════════ PLACES ═════════ -->
+<section class="view" id="places" data-title="방문지">
+  <div class="wrap">
+    <div class="page-t">방문지</div><div class="page-s">탭하면 네이버 지도로 열립니다</div>
+    <div class="card"><div id="plList"></div>
+      <a class="cta" href="https://naver.me/5YospSjF" target="_blank" rel="noopener"><span class="nv">N</span>저장한 장소 전체 보기</a></div>
+  </div>
+</section>
+
+<!-- ═════════ CONF ═════════ -->
+<section class="view" id="conf" data-title="학회정보">
+  <div class="wrap">
+    <div class="page-t">학회정보</div><div class="page-s">KIDET 2026 추계</div>
+    <div class="card pad">
+      <div class="lg-n">2026 한국국방기술학회 추계학술대회</div>
+      <div class="lg-a">KIDET · Korea Institute of Defense Technology</div>
+      <div class="kv" style="margin-top:18px">
+        <span class="k">기간</span><span class="v">2026.10.28 (수) – 10.30 (금)</span>
+        <span class="k">장소</span><span class="v">신협제주연수원<small>제주시 애월읍</small></span>
+        <span class="k">공식 종료</span><span class="v">10.30 (금) 13:30<small>우리 팀은 11:15 이탈 (13:05 귀국편)</small></span>
+      </div>
+    </div>
+    <div class="sub-h">우리 팀 참석 세션</div>
+    <div class="card" id="sessions"></div>
+  </div>
+</section>
+
+<!-- ═════════ SETTINGS ═════════ -->
+<section class="view" id="settings" data-title="설정">
+  <div class="wrap">
+    <div class="page-t">설정</div><div class="page-s">여기서 바꾼 내용은 모든 사람에게 공유됩니다</div>
+
+    <div class="sub-h">렌터카</div>
+    <div class="card">
+      <div class="field"><label for="inPlate">차량번호</label>
+        <input id="inPlate" placeholder="예: 123허 4567" autocomplete="off">
+        <div class="hint">수령 후 번호를 입력하고 저장하면, 교통 페이지에 모든 사람에게 자동 표시됩니다. 비우고 저장하면 ‘미배정’으로 돌아갑니다.</div></div>
+      <button class="primary" id="btnSave">저장</button>
+    </div>
+
+    <div class="sub-h">관리자 연결</div>
+    <div class="card">
+      <div class="status" id="connStatus"><i></i><span>확인 중</span></div>
+      <div class="field"><label for="inToken">GitHub 토큰</label>
+        <input id="inToken" class="sm2" type="password" placeholder="github_pat_…" autocomplete="off">
+        <div class="hint">이 기기에만 저장되며 다른 사람에게 보이지 않습니다. 한 번만 입력하면 됩니다.</div></div>
+      <div class="field"><label for="inRepo">저장소</label>
+        <input id="inRepo" class="sm2" placeholder="사용자명/저장소명" autocomplete="off">
+        <div class="hint">GitHub Pages 주소에서 자동으로 인식합니다. 비어 있을 때만 직접 입력하세요.</div></div>
+      <button class="primary dark" id="btnConn">연결 저장</button>
+      <details class="help"><summary>토큰 발급 방법</summary>
+        <ol>
+          <li>GitHub → <b>Settings</b> → <b>Developer settings</b> → <b>Fine-grained tokens</b> → <b>Generate new token</b></li>
+          <li>Repository access: <b>Only select repositories</b> → 이 페이지 저장소 선택</li>
+          <li>Permissions → Repository → <b>Contents: Read and write</b></li>
+          <li>생성된 토큰(github_pat_…)을 위 칸에 붙여넣기</li>
+        </ol></details>
+    </div>
+  </div>
+</section>
+
+<!-- sub-page top bar (shared) -->
+<div class="bar" id="bar" style="display:none;position:fixed;left:0;right:0;top:0"><div class="in">
+  <a class="icon-btn" href="#home" aria-label="뒤로"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></a><h2 id="barT"></h2>
+</div></div>
+
+<div class="toast" id="toast"></div>
+<div class="lb" id="lb">
+  <div class="lb-bar"><span class="lb-name" id="lbName">탑승권</span><button class="lb-close" id="lbClose">닫기</button></div>
+  <div class="lb-stage"><img id="lbImg" alt="탑승권"></div>
+  <div class="lb-hint">두 손가락으로 확대 · 더블탭 확대/축소 · 확대 후 드래그</div>
+</div>
+
+<script>
+/* ═══════════ 설정 (고정 정보) ═══════════
+   E-티켓 : eticket/e-Ticket_{이름}_{출발편|복귀편}.pdf
+   탑승권 : boarding/e-Ticket_{이름}_{출발편|복귀편}.png
+   공유 설정(차량번호 등)은 저장소의 config.json 에 저장됩니다.          */
+const TRIP={
+  start:'2026-10-28', end:'2026-10-30',
+  repo:'',            // 비워두면 GitHub Pages 주소에서 자동 인식 (예: 'hyunjoon0605/jeju')
+  wx:{lat:33.4627, lon:126.3260},
+
+  days:[
+    {date:'2026-10-28', dow:'수', title:'이동 · 학회 첫날', ev:[
+      {t:'10:30', w:'육사 출발', n:'차량/택시 · 김포공항까지 약 60–70분'},
+      {t:'11:40', w:'김포공항 도착 · 체크인', n:'체크인 마감 13:20'},
+      {t:'12:00', w:'공항 내 점심'},
+      {t:'13:50', w:'김포 → 제주', chip:'OZ8955', n:'아시아나 · 15:05 도착', k:'fly'},
+      {t:'15:05', w:'제주공항 도착 · 렌터카 셔틀', n:'셔틀버스 1구역 2승차장'},
+      {t:'15:30', w:'렌터카 수령', chip:'렌터카', n:'제주지점 · 팰리세이드 디젤', k:'car'},
+      {t:'16:00', w:'신협제주연수원 도착 · 등록', n:'제주지점에서 바로 이동 · 약 30분 · 짐은 차에 보관'},
+      {t:'16:30', w:'오후 세션', chip:'학회', k:'key'},
+      {t:'18:00', w:'석식', n:'학회 만찬 여부 확인 후 결정'},
+      {t:'20:00', w:'다인 오셔노 호텔 체크인', n:'석식 후 이동 · 객실료 현장 결제'},
+    ]},
+    {date:'2026-10-29', dow:'목', title:'학회 전일', ev:[
+      {t:'08:00', w:'조식', n:'Room Only · 호텔 조식 미포함, 인근 식당 이용'},
+      {t:'09:00', w:'오전 세션', chip:'학회', k:'key'},
+      {t:'12:00', w:'점심', n:'학회 제공 여부 확인 필요'},
+      {t:'13:30', w:'오후 세션', chip:'학회', k:'key'},
+      {t:'18:00', w:'세션 종료 · 석식'},
+    ]},
+    {date:'2026-10-30', dow:'금', title:'학회 마지막 날 · 복귀',
+     warn:'학회 공식 종료(13:30) 전 11:15에 이탈합니다. 렌터카 반납 후 셔틀로 공항 이동, 귀국편 체크인 마감은 12:35입니다.', ev:[
+      {t:'08:00', w:'조식 · 짐 정리'},
+      {t:'09:00', w:'오전 세션', chip:'학회', k:'key'},
+      {t:'10:45', w:'호텔 체크아웃', n:'11:00 마감 · 세션 중간에 처리'},
+      {t:'11:15', w:'연수원 출발', n:'제주지점까지 약 30분'},
+      {t:'11:45', w:'렌터카 반납', chip:'렌터카', n:'제주지점 (용담이동) · 반납 기한 12:00', k:'car'},
+      {t:'12:05', w:'셔틀로 제주공항 도착 · 체크인', n:'체크인 마감 12:35'},
+      {t:'13:05', w:'제주 → 김포', chip:'BX8320', n:'에어부산 · 14:25 도착', k:'fly'},
+      {t:'15:30', w:'육사 복귀'},
+    ]},
+  ],
+
+  rental:{ car:'팰리세이드 디젤', year:'2021–22년식', resv:'260002734247', ins:'완전면책',
+    pick:['10.28 (수)','15:30'], drop:['10.30 (금)','12:00'],
+    branch:'제주지점', addr:'제주시 용담이동 730-10', shuttle:'제주공항 셔틀버스 1구역 2승차장' },
+
+  flights:[
+    {key:'출발편', label:'가는 편', date:'10.28 (수)', no:'OZ8955', carrier:'아시아나항공 · A330', dur:'1시간 15분',
+     from:['GMP','김포','13:50'], to:['CJU','제주','15:05'], depISO:'2026-10-28T13:50:00+09:00',
+     pax:[{n:'조성식',seat:'7A',pos:'창가',biz:1},{n:'성호용',seat:'8D',pos:'통로',biz:1},
+          {n:'김현준',seat:'37G',pos:'통로'},{n:'신지윤',seat:'37H',pos:'창가'}],
+     cabins:[{name:'비즈니스 · 7–11열',cols:'AB DE GH',rows:[7,8,9],biz:1},
+             {name:'이코노미 · 28–47열',cols:'AB CDEF GH',rows:[36,37,38]}]},
+    {key:'복귀편', label:'오는 편', date:'10.30 (금)', no:'BX8320', carrier:'에어부산', dur:'1시간 20분',
+     from:['CJU','제주','13:05'], to:['GMP','김포','14:25'], depISO:'2026-10-30T13:05:00+09:00',
+     pax:[{n:'김현준',seat:'48A',pos:'창가'},{n:'신지윤',seat:'48B',pos:'중간'},
+          {n:'조성식',seat:'48C',pos:'통로'},{n:'성호용',seat:'48D',pos:'통로'}],
+     cabins:[{name:'일반석 · 28–54열',cols:'ABC DEF',rows:[47,48,49]}]},
+  ],
+
+  lodge:{name:'다인 오셔노 호텔', en:'Dyne Oceano Hotel', addr:'제주시 애월읍', tags:['Room Only','조식 미포함','2박 · 성인 4'],
+    resv:'651700027901',
+    in:['10.28 (수)','입실 15:00 · 도착 20:00경'], out:['10.30 (금)','11:00까지'],
+    rooms:[{k:'패밀리 로얄 스위트',e:'Oceano Family Royal Suite',v:'성호용 · 신지윤 · 김현준'},
+           {k:'오션 스위트',e:'Oceano Ocean Suite',v:'조성식'}],
+    pay:{method:'호텔에서 결제 (체크인 시)', total:'1,396,320원', due:'1,396,320원'},
+    memo:'숙박확인서 발급 요청 완료',
+    cancel:[['10.21 (수)까지','무료'],['10.24 (토)까지','40%'],['10.27 (화)까지','50%'],['10.27 (화) 24시 이후 · 노쇼','100%']]},
+
+  places:[
+    {n:'다인 오셔노 호텔', d:'숙소 · 애월', q:'다인 오셔노 호텔', ic:'bed'},
+    {n:'신협제주연수원', d:'학회장 · 애월', q:'신협제주연수원', ic:'cap'},
+    {n:'렌터카 제주지점', d:'제주시 용담이동 730-10', q:'제주시 용담이동 730-10', ic:'car'},
+    {n:'제주국제공항', d:'공항 · 셔틀 1구역 2승차장', q:'제주국제공항', ic:'plane'},
+  ],
+};
+/* ═══════════ 설정 끝 ═══════════ */
+
+const $=s=>document.querySelector(s), H=36e5;
+const kst=d=>new Date(d.getTime()+9*H);
+const todayKST=kst(new Date()).toISOString().slice(0,10);
+const nowMin=(()=>{const k=kst(new Date());return k.getUTCHours()*60+k.getUTCMinutes();})();
+const toMin=t=>{const [h,m]=t.split(':').map(Number);return h*60+m;};
+const LS={get:k=>{try{return localStorage.getItem(k)||''}catch(e){return ''}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
+const ICON={
+  sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/>',
+  cal:'<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',
+  car:'<path d="M5 17h14M5 17v2M19 17v2M3.5 13l2-5.2A2 2 0 0 1 7.4 6.5h9.2a2 2 0 0 1 1.9 1.3l2 5.2v4h-17z"/><circle cx="7.5" cy="13.8" r=".9"/><circle cx="16.5" cy="13.8" r=".9"/>',
+  bed:'<path d="M3 19V8m18 11v-5a3 3 0 0 0-3-3h-7v5M3 16h18"/><circle cx="7" cy="12" r="1.7"/>',
+  pin:'<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>',
+  cap:'<path d="M2.5 9 12 4.5 21.5 9 12 13.5z"/><path d="M6.5 11v4.5c0 1.4 2.5 3 5.5 3s5.5-1.6 5.5-3V11"/>',
+  plane:'<path d="M10.2 13.8 4 12l-1.2 1.2 5 2.6 2.6 5 1.2-1.2-1.8-6.2 4.4-4.4 3.6 7.6 1.4-1.4-1-9.8 2.3-2.3a1.6 1.6 0 0 0-2.3-2.3l-2.3 2.3-9.8-1-1.4 1.4 7.6 3.6z"/>',
+};
+const svg=(k)=>`<svg viewBox="0 0 24 24">${ICON[k]}</svg>`;
+const CHEV='<svg class="chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ── D-day ── */
+(()=>{const s=new Date(TRIP.start+'T00:00:00+09:00'),t=new Date(todayKST+'T00:00:00+09:00'),e=new Date(TRIP.end+'T23:59:59+09:00');
+  const d=Math.round((s-t)/864e5);$('#dday').textContent=d>0?'출발 D-'+d:(new Date()<=e?'출장 DAY '+(1-d):'다녀왔어요');})();
+
+/* ── home tiles ── */
+const TILES=[
+  {id:'weather',  n:'날씨',    ic:'sun', c:'c1', s:'애월 3일 예보'},
+  {id:'schedule', n:'일정',    ic:'cal', c:'c2', s:'2박 3일'},
+  {id:'transport',n:'교통',    ic:'car', c:'c3', s:'OZ8955 · BX8320'},
+  {id:'lodge',    n:'숙소',    ic:'bed', c:'c4', s:'다인 오셔노 호텔'},
+  {id:'places',   n:'방문지',  ic:'pin', c:'c5', s:'네이버 지도'},
+  {id:'conf',     n:'학회정보',ic:'cap', c:'c6', s:'신협제주연수원'},
+];
+$('#tiles').innerHTML=TILES.map(t=>`<a class="tile" href="#${t.id}"><span class="ti ${t.c}">${svg(t.ic)}</span><b>${t.n}</b><span id="tp-${t.id}">${t.s}</span></a>`).join('');
+const tp=(id,txt)=>{const el=$('#tp-'+id);if(el)el.textContent=txt;};
+(()=>{ // 다음 일정 미리보기
+  const all=TRIP.days.flatMap(d=>d.ev.map(e=>({...e,date:d.date})));
+  const nx=all.find(e=>e.date>todayKST||(e.date===todayKST&&toMin(e.t)>=nowMin));
+  if(todayKST>=TRIP.start&&nx) tp('schedule',`다음 ${nx.t} ${nx.w}`);
+})();
+
+/* ── router ── */
+const bar=$('#bar');
+function route(){
+  const id=(location.hash||'#home').slice(1)||'home';
+  const v=document.getElementById(id)&&document.getElementById(id).classList.contains('view')?id:'home';
+  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id===v));
+  if(v==='home'){bar.style.display='none';}
+  else{bar.style.display='block';$('#barT').textContent=document.getElementById(v).dataset.title;}
+  document.querySelectorAll('.view:not(#home)').forEach(x=>x.style.paddingTop=v==='home'?'':'calc(56px + var(--safe-t))');
+  window.scrollTo(0,0);
+  if(v==='settings') initSettings();
+}
+window.addEventListener('hashchange',route);
+
+/* ── weather ── */
+const WX={};
+const wIcon=c=>{
+  const sun='<g class="sun">'+ICON.sun+'</g>';
+  const cloud='<path d="M7 18.5h10a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.4A3.3 3.3 0 0 0 7 18.5z"/>';
+  const part='<g class="sun"><circle cx="8.5" cy="8.5" r="3"/><path d="M8.5 2.5v1.3M2.5 8.5h1.3M4.3 4.3l.9.9M12.7 4.3l-.9.9"/></g><path d="M9 19.5h8.5a3.5 3.5 0 0 0 .3-7 4.8 4.8 0 0 0-9.2 1.2A2.9 2.9 0 0 0 9 19.5z"/>';
+  const rain='<path d="M7 14.5h10a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.4A3.3 3.3 0 0 0 7 14.5z"/><g class="rain"><path d="M8.5 17.5 7.5 20M12.5 17.5l-1 2.5M16.5 17.5l-1 2.5"/></g>';
+  return `<svg viewBox="0 0 24 24">${c===0?sun:[1,2].includes(c)?part:[3,45,48].includes(c)?cloud:rain}</svg>`;};
+const wName=c=>c===0?'맑음':[1,2].includes(c)?'구름 조금':c===3?'흐림':[45,48].includes(c)?'안개':[51,53,55,56,57].includes(c)?'이슬비':[95,96,99].includes(c)?'뇌우':[71,73,75,77,85,86].includes(c)?'눈':'비';
+function renderWx(ok){
+  $('#wxList').innerHTML=TRIP.days.map(d=>{const w=WX[d.date];
+    return `<div class="wd">${w?wIcon(w.c):wIcon(3)}<div class="dn"><b>${+d.date.slice(5,7)}월 ${+d.date.slice(8)}일 ${d.dow}요일</b>
+      <span>${w?wName(w.c)+(w.ws!=null?` · 바람 ${Math.round(w.ws/3.6)}m/s`:''):'예보 준비 중'}</span></div>
+      <div class="tp">${w?`<b>${Math.round(w.hi)}°</b><em>${Math.round(w.lo)}°</em><div>${w.p!=null?'강수 '+w.p+'%':''}</div>`:'<em>–</em>'}</div></div>`;}).join('');
+  if(!ok)$('#wxSrc').textContent='예보를 불러오지 못했습니다 (인터넷 필요)';
+}
+renderWx(true);
+fetch(`https://api.open-meteo.com/v1/forecast?latitude=${TRIP.wx.lat}&longitude=${TRIP.wx.lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max&timezone=Asia%2FSeoul&start_date=${TRIP.start}&end_date=${TRIP.end}`)
+.then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{const D=j.daily;
+  D.time.forEach((t,i)=>{if(D.temperature_2m_max[i]!=null)WX[t]={c:D.weather_code[i],hi:D.temperature_2m_max[i],lo:D.temperature_2m_min[i],p:D.precipitation_probability_max[i],ws:D.wind_speed_10m_max[i]};});
+  renderWx(true);const n=new Date();$('#wxSrc').textContent=`Open-Meteo · ${n.getMonth()+1}/${n.getDate()} ${n.getHours()}:${String(n.getMinutes()).padStart(2,'0')} 업데이트`;
+  const w=WX[todayKST]||WX[TRIP.start]; if(w)tp('weather',`${wName(w.c)} · ${Math.round(w.hi)}° / ${Math.round(w.lo)}°`);
+  renderDay(cur);
+}).catch(()=>renderWx(false));
+
+/* ── schedule ── */
+let cur=Math.max(0,TRIP.days.findIndex(d=>d.date===todayKST));
+$('#seg').innerHTML=TRIP.days.map((d,i)=>`<button data-i="${i}" class="${d.date===todayKST?'today':''}"><span class="d">${+d.date.slice(5,7)}.${+d.date.slice(8)}</span><span class="w">${d.dow}요일</span></button>`).join('');
+$('#seg').querySelectorAll('button').forEach(b=>b.onclick=()=>renderDay(+b.dataset.i));
+function renderDay(i){
+  cur=i;const d=TRIP.days[i],w=WX[d.date];
+  $('#seg').querySelectorAll('button').forEach((b,k)=>b.classList.toggle('on',k===i));
+  const isToday=d.date===todayKST,isPast=d.date<todayKST;let nowIdx=-1;
+  if(isToday)d.ev.forEach((e,k)=>{if(toMin(e.t)<=nowMin)nowIdx=k;});
+  $('#day').innerHTML=`<div class="day-h"><b>${d.title}</b><span>${w?`${wName(w.c)} ${Math.round(w.hi)}°/${Math.round(w.lo)}°`:d.ev.length+'개 일정'}</span></div>
+    ${d.warn?`<div class="warn">${d.warn}</div>`:''}
+    <div class="tl">${d.ev.map((e,k)=>{const st=isPast||(isToday&&k<nowIdx)?'past':(isToday&&k===nowIdx?'now':'');
+      return `<div class="ev ${e.k||''} ${st}"><div class="tm">${e.t}</div><div class="ln"><span class="dt"></span></div>
+      <div class="bd"><div class="w">${e.chip?`<span class="chip">${e.chip}</span>`:''}${e.w}</div>${e.n?`<div class="n">${e.n}</div>`:''}</div></div>`;}).join('')}</div>`;
+}
+renderDay(cur);
+
+/* ── shared config (config.json in repo) ── */
+let CFG={};
+function repoId(){
+  const manual=(LS.get('jeju_repo')||TRIP.repo||'').trim(); if(manual.includes('/'))return manual;
+  const h=location.hostname; if(!h.endsWith('.github.io'))return '';
+  const owner=h.split('.')[0]; const seg=decodeURIComponent(location.pathname.split('/').filter(Boolean)[0]||'');
+  const repo=seg&&!/\.html?$/.test(seg)?seg:h; return owner+'/'+repo;
+}
+const apiURL=()=>`https://api.github.com/repos/${repoId()}/contents/config.json`;
+async function loadCfg(){
+  if(repoId()){try{const r=await fetch(apiURL(),{headers:{Accept:'application/vnd.github.raw+json'},cache:'no-store'});
+    if(r.ok)return await r.json(); if(r.status===404)return {};}catch(e){}}
+  try{const r=await fetch('config.json?t='+Date.now(),{cache:'no-store'});if(r.ok)return await r.json();}catch(e){}
+  return {};
+}
+async function saveCfg(next){
+  const tok=LS.get('jeju_token'); if(!tok)throw new Error('관리자 연결(GitHub 토큰)이 필요합니다.');
+  if(!repoId())throw new Error('저장소를 인식하지 못했습니다. 관리자 연결에서 입력해 주세요.');
+  const h={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'};
+  let sha; const g=await fetch(apiURL(),{headers:h,cache:'no-store'});
+  if(g.ok)sha=(await g.json()).sha; else if(g.status!==404)throw new Error('저장소 접근 실패 ('+g.status+') · 토큰 권한을 확인하세요.');
+  const body=JSON.stringify(next,null,2);
+  const p=await fetch(apiURL(),{method:'PUT',headers:{...h,'Content-Type':'application/json'},
+    body:JSON.stringify({message:'설정 업데이트: 차량번호',content:btoa(unescape(encodeURIComponent(body))),sha})});
+  if(!p.ok)throw new Error('저장 실패 ('+p.status+') · 토큰에 Contents 쓰기 권한이 있는지 확인하세요.');
+}
+
+/* ── transport ── */
+function renderRental(){
+  const R=TRIP.rental,plate=(CFG.carPlate||'').trim();
+  $('#rental').innerHTML=`<div class="pad">
+    <div class="car-head"><div><div class="nm">${R.car}</div><div class="sb">${R.year} · ${R.branch}</div></div></div>
+    <div class="plate"><div class="lb">차량번호</div>
+      ${plate?`<div class="num">${esc(plate)}</div>`:`<div class="tbd">미배정 · 수령 시 확정</div>`}
+      ${plate&&CFG.updatedAt?`<div class="up">${new Date(CFG.updatedAt).toLocaleString('ko-KR',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} 등록</div>`:''}</div>
+    <div class="kv" style="margin-top:18px">
+      <span class="k">예약번호</span><span class="v">${R.resv}<button class="copy" data-copy="${R.resv}">복사</button></span>
+      <span class="k">보험</span><span class="v">${R.ins}</span>
+      <span class="k">대여지점</span><span class="v">${R.branch}<small>${R.addr}</small></span>
+      <span class="k">셔틀버스</span><span class="v">${R.shuttle}</span>
+    </div></div>
+    <div class="rent-t"><div><div class="k">대여</div><div class="v">${R.pick[0]}</div><div class="s">${R.pick[1]}</div></div>
+      <div><div class="k">반납</div><div class="v">${R.drop[0]}</div><div class="s">${R.drop[1]}</div></div></div>`;
+  $('#rental').querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.copy).then(()=>toast('복사됨','예약번호 '+b.dataset.copy));});
+  tp('transport',plate?`팰리세이드 ${plate}`:'OZ8955 · BX8320 · 렌터카');
+}
+renderRental();
+loadCfg().then(c=>{CFG=c||{};renderRental();});
+
+function seatMap(f){
+  const taken={};f.pax.forEach(p=>taken[p.seat]=p);
+  return f.cabins.map(c=>{const cols=c.cols.split('');
+    const hd=`<div class="grow hd"><span class="rn"></span>${cols.map(x=>x===' '?'<span class="gap"></span>':`<span class="st">${x}</span>`).join('')}<span class="rn"></span></div>`;
+    const rows=c.rows.map(r=>`<div class="grow"><span class="rn">${r}</span>${cols.map(x=>{if(x===' ')return '<span class="gap"></span>';const p=taken[r+x];
+      return p?`<span class="st me ${c.biz?'biz':''}">${p.n.slice(1)}</span>`:'<span class="st"></span>';}).join('')}<span class="rn">${r}</span></div>`).join('');
+    return `<div class="cab"><div class="cab-n">${c.name}</div><div class="grid">${hd}${rows}</div></div>`;}).join('')
+  +`<div class="sm-legend">${f.pax.map(p=>`<span><b>${p.n}</b> ${p.seat}</span>`).join('')}</div>`;
+}
+$('#flights').innerHTML=TRIP.flights.map((f,fi)=>`<div class="card">
+  <div class="fl-top"><div class="fl-meta"><span class="dir">${f.label}</span><span>${f.date}</span><span class="no">${f.no}</span></div>
+    <div class="route"><div><div class="c">${f.from[0]}</div><div class="t">${f.from[2]}</div><div class="p">${f.from[1]}</div></div>
+      <div class="mid"><span>${f.dur}</span><div class="bar2"></div></div>
+      <div class="r"><div class="c">${f.to[0]}</div><div class="t">${f.to[2]}</div><div class="p">${f.to[1]}</div></div></div>
+    <div class="fl-car">${f.carrier}</div></div>
+  <div class="perf"></div>
+  <div style="padding-top:6px">${f.pax.map(p=>{const base=`e-Ticket_${p.n}_${f.key}`;
+    return `<div class="pax"><div class="seat ${p.biz?'biz':''}">${p.seat}</div>
+      <div class="who"><div class="nm">${p.n}</div><div class="ds">${p.biz?'<b>비즈니스</b> · ':'일반석 · '}${p.pos}</div></div>
+      <div class="acts"><a class="btn ghost tk" href="eticket/${encodeURIComponent(base)}.pdf" target="_blank" rel="noopener">E-티켓</a>
+      <button class="btn bp" data-bp="${base}" data-dep="${f.depISO}">탑승권</button></div></div>`;}).join('')}</div>
+  <button class="sm-tg" data-sm="${fi}">좌석 배치 보기<svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button>
+  <div class="sm" id="sm${fi}">${seatMap(f)}</div></div>`).join('');
+document.querySelectorAll('.sm-tg').forEach(b=>b.onclick=()=>{const o=$('#sm'+b.dataset.sm).classList.toggle('open');b.classList.toggle('open',o);b.firstChild.textContent=o?'좌석 배치 접기':'좌석 배치 보기';});
+
+/* ── lodge ── */
+(()=>{const L=TRIP.lodge;
+  $('#lodgeCard').innerHTML=`<a class="pad" style="display:block" href="https://map.naver.com/p/search/${encodeURIComponent(L.name)}" target="_blank" rel="noopener">
+    <div class="lg-n">${L.name}</div><div class="lg-a">${L.en} · ${L.addr} · 지도 보기 ›</div><div class="tags">${L.tags.map(t=>`<span>${t}</span>`).join('')}</div></a>
+    <div class="ck"><div><div class="k">체크인</div><div class="v">${L.in[0]}</div><div class="s">${L.in[1]}</div></div>
+      <div><div class="k">체크아웃</div><div class="v">${L.out[0]}</div><div class="s">${L.out[1]}</div></div></div>
+    ${L.rooms.map(r=>`<div class="room"><span><span class="v" style="display:block">${r.k}</span><span class="k">${r.e}</span></span><span class="v">${r.v}</span></div>`).join('')}`;
+  $('#lodgeInfo').innerHTML=`<div class="pad"><div class="kv">
+      <span class="k">예약번호</span><span class="v">${L.resv}<button class="copy" data-copy="${L.resv}">복사</button></span>
+      <span class="k">결제</span><span class="v">${L.pay.method}<small>총 ${L.pay.total} · 미결제 ${L.pay.due}</small></span>
+      <span class="k">요청사항</span><span class="v">${L.memo}</span></div></div>`;
+  $('#lodgeCancel').innerHTML=L.cancel.map((c,i)=>`<div class="room"><span class="k">${c[0]}</span><span class="v" style="${i===0?'color:var(--green)':''}">${c[1]==='무료'?'취소 수수료 없음':'객실료의 '+c[1]}</span></div>`).join('').replace('<div class="room">','<div class="room" style="border-top:none">');
+  document.querySelectorAll('#lodgeInfo [data-copy]').forEach(b=>b.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(b.dataset.copy).then(()=>toast('복사됨','예약번호 '+b.dataset.copy));});
+})();
+
+/* ── places ── */
+$('#plList').innerHTML=TRIP.places.map(p=>`<a class="row" href="https://map.naver.com/p/search/${encodeURIComponent(p.q)}" target="_blank" rel="noopener">
+  <span class="ic">${svg(p.ic)}</span><span class="tx"><b>${p.n}</b><span>${p.d}</span></span>${CHEV}</a>`).join('');
+
+/* ── conf sessions ── */
+$('#sessions').innerHTML=TRIP.days.flatMap(d=>d.ev.filter(e=>e.k==='key').map(e=>`<div class="row"><span class="ic">${svg('cap')}</span>
+  <span class="tx"><b>${e.w}</b><span>${+d.date.slice(5,7)}.${+d.date.slice(8)} ${d.dow} · ${e.t}</span></span></div>`)).join('');
+
+/* ── settings ── */
+async function checkConn(){
+  const st=$('#connStatus'),tok=LS.get('jeju_token'),rid=repoId();
+  st.className='status';
+  if(!tok){st.classList.add('no');st.querySelector('span').textContent='관리자 미연결 · 저장하려면 토큰이 필요합니다';return;}
+  if(!rid){st.classList.add('no');st.querySelector('span').textContent='저장소를 입력해 주세요';return;}
+  st.querySelector('span').textContent='확인 중…';
+  try{const r=await fetch('https://api.github.com/repos/'+rid,{headers:{Authorization:'Bearer '+tok,Accept:'application/vnd.github+json'},cache:'no-store'});
+    if(r.ok){const j=await r.json();const can=j.permissions&&j.permissions.push;
+      st.classList.add(can?'ok':'no');st.querySelector('span').textContent=can?`연결됨 · ${rid}`:`읽기 전용 토큰 · 쓰기 권한 필요`;}
+    else{st.classList.add('no');st.querySelector('span').textContent=`연결 실패 (${r.status}) · 토큰/저장소 확인`;}}
+  catch(e){st.classList.add('no');st.querySelector('span').textContent='연결 실패 · 인터넷 확인';}
+}
+function initSettings(){
+  $('#inPlate').value=CFG.carPlate||'';
+  $('#inToken').value=LS.get('jeju_token');
+  $('#inRepo').value=repoId();
+  checkConn();
+}
+$('#btnConn').onclick=()=>{LS.set('jeju_token',$('#inToken').value.trim());
+  const rv=$('#inRepo').value.trim(); LS.set('jeju_repo',rv&&rv!==repoId()||LS.get('jeju_repo')?rv:'');
+  checkConn();toast('연결 정보 저장','이 기기에만 저장되었습니다.');};
+$('#btnSave').onclick=async()=>{
+  const b=$('#btnSave');b.disabled=true;b.textContent='저장 중…';
+  try{const fresh=await loadCfg();const next={...fresh,carPlate:$('#inPlate').value.trim(),updatedAt:new Date().toISOString()};
+    await saveCfg(next);CFG=next;renderRental();toast('저장 완료','지금부터 누가 들어와도 차량번호가 보입니다.');}
+  catch(e){toast('저장하지 못했습니다',e.message);}
+  finally{b.disabled=false;b.textContent='저장';}
+};
+
+/* ── toast ── */
+let tT;function toast(t,s){const el=$('#toast');el.innerHTML=`<b>${t}</b><span>${s}</span>`;el.classList.add('show');clearTimeout(tT);tT=setTimeout(()=>el.classList.remove('show'),3600);}
+
+/* ── e-ticket check ── */
+document.querySelectorAll('.btn.tk').forEach(a=>{
+  fetch(a.href,{method:'HEAD',cache:'no-store'}).then(r=>{if(!r.ok)throw 0;}).catch(()=>{
+    a.classList.add('na');a.removeAttribute('target');
+    a.addEventListener('click',e=>{e.preventDefault();toast('E-티켓 미등록','eticket 폴더에 PDF를 올리면 여기서 열립니다.');});});
+});
+
+/* ── boarding pass + lightbox ── */
+(()=>{
+  const lb=$('#lb'),img=$('#lbImg'),stage=img.parentElement;let s=1,tx=0,ty=0;
+  const ap=()=>img.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
+  const rs=()=>{s=1;tx=0;ty=0;img.style.transition='none';ap();};
+  const cl=()=>{const r=stage.getBoundingClientRect(),mx=Math.max(0,(img.clientWidth*s-r.width)/2)+30,my=Math.max(0,(img.clientHeight*s-r.height)/2)+30;
+    tx=Math.max(-mx,Math.min(mx,tx));ty=Math.max(-my,Math.min(my,ty));};
+  const zt=(n,fx,fy)=>{n=Math.max(1,Math.min(5,n));const r=stage.getBoundingClientRect(),ox=fx-(r.left+r.width/2),oy=fy-(r.top+r.height/2),k=n/s;
+    tx=ox-(ox-tx)*k;ty=oy-(oy-ty)*k;s=n;cl();ap();};
+  const open=(src,t)=>{img.src=src;$('#lbName').textContent=t;lb.classList.add('open');document.body.style.overflow='hidden';rs();};
+  const close=()=>{lb.classList.remove('open');document.body.style.overflow='';img.src='';rs();};
+  $('#lbClose').onclick=close;
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&lb.classList.contains('open'))close();});
+  let lt=0,lx=0,ly=0;
+  stage.addEventListener('click',e=>{const n=Date.now();
+    if(n-lt<300&&Math.abs(e.clientX-lx)<30&&Math.abs(e.clientY-ly)<30){img.style.transition='transform .22s ease';if(s>1.05){s=1;tx=0;ty=0;ap();}else zt(2.6,e.clientX,e.clientY);}
+    lt=n;lx=e.clientX;ly=e.clientY;});
+  let p0=0,s0=1,px=0,py=0,t0x=0,t0y=0,drag=false;
+  const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+  stage.addEventListener('touchstart',e=>{if(e.touches.length===2){p0=dist(e.touches);s0=s;img.style.transition='none';e.preventDefault();}
+    else if(e.touches.length===1&&s>1){drag=true;px=e.touches[0].clientX;py=e.touches[0].clientY;t0x=tx;t0y=ty;}},{passive:false});
+  stage.addEventListener('touchmove',e=>{if(e.touches.length===2&&p0>0){img.style.transition='none';
+      zt(s0*dist(e.touches)/p0,(e.touches[0].clientX+e.touches[1].clientX)/2,(e.touches[0].clientY+e.touches[1].clientY)/2);e.preventDefault();}
+    else if(drag&&e.touches.length===1){tx=t0x+e.touches[0].clientX-px;ty=t0y+e.touches[0].clientY-py;img.style.transition='none';cl();ap();e.preventDefault();}},{passive:false});
+  stage.addEventListener('touchend',e=>{if(e.touches.length<2)p0=0;if(!e.touches.length){drag=false;if(s<1.03)rs();}});
+  const fmt=iso=>{const o=kst(new Date(new Date(iso).getTime()-24*H)),h=o.getUTCHours();
+    return `${o.getUTCMonth()+1}/${o.getUTCDate()} ${h<12?'오전':'오후'} ${h%12||12}:${String(o.getUTCMinutes()).padStart(2,'0')}`;};
+  document.querySelectorAll('.btn.bp').forEach(btn=>{
+    const base=btn.dataset.bp,dep=btn.dataset.dep,url='boarding/'+encodeURIComponent(base+'.png'),nm=base.replace('e-Ticket_','').replace('_',' ');
+    btn.classList.add('checking');btn.textContent='확인 중';
+    fetch(url,{method:'HEAD',cache:'no-store'}).then(r=>r.ok).catch(()=>fetch(url,{cache:'no-store'}).then(r=>r.ok).catch(()=>false)).then(ok=>{
+      btn.classList.remove('checking');
+      if(ok){btn.classList.add('ready');btn.textContent='탑승권';btn.onclick=()=>open(url,nm+' 탑승권');}
+      else{btn.classList.add('pending');btn.textContent='발권 전';
+        btn.onclick=()=>{const before=new Date()<new Date(new Date(dep).getTime()-24*H);
+          before?toast('탑승권 발권 전',`출발 24시간 전(${fmt(dep)})부터 등록됩니다.`):toast('탑승권 미등록','메일로 받은 탑승권 PNG를 boarding 폴더에 올리면 바로 열립니다.');};}
+    });
+  });
+})();
+
+route();
+</script>
+</body>
+</html>
