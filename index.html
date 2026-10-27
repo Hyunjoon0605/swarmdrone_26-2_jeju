@@ -297,7 +297,7 @@ details.help b{color:var(--sub)}
     <div class="card" id="rental"></div>
     <div class="sub-h">항공편</div>
     <div id="flights"></div>
-    <p class="note">E-티켓은 예약 증빙으로 언제든 열립니다. 탑승권은 출발 24시간 전부터 등록되며, 그 전에는 ‘발권 전’으로 표시됩니다.</p>
+    <p class="note">탑승권을 누르면 바코드가 크게 열립니다. 보안검색대와 탑승구에서 그대로 보여주세요.</p>
   </div>
 </section>
 
@@ -402,7 +402,7 @@ const TRIP={
       {t:'10:30', w:'육사 출발', n:'차량/택시 · 김포공항까지 약 60–70분'},
       {t:'11:40', w:'김포공항 도착 · 체크인', n:'체크인 마감 13:20'},
       {t:'12:00', w:'공항 내 점심'},
-      {t:'13:50', w:'김포 → 제주', chip:'OZ8955', n:'아시아나 · 15:05 도착', k:'fly'},
+      {t:'13:50', w:'김포 → 제주', chip:'OZ8955', n:'아시아나 · 탑승 13:20 · 출발 20분 전까지 탑승구 도착', k:'fly'},
       {t:'15:05', w:'제주공항 도착 · 렌터카 셔틀', n:'셔틀버스 1구역 2승차장'},
       {t:'15:30', w:'렌터카 수령', chip:'렌터카', n:'제주지점 · 팰리세이드 디젤', k:'car'},
       {t:'16:00', w:'신협제주연수원 도착 · 등록', n:'제주지점에서 바로 이동 · 약 30분 · 짐은 차에 보관'},
@@ -424,8 +424,8 @@ const TRIP={
       {t:'10:45', w:'호텔 체크아웃', n:'11:00 마감 · 세션 중간에 처리'},
       {t:'11:15', w:'연수원 출발', n:'제주지점까지 약 30분'},
       {t:'11:45', w:'렌터카 반납', chip:'렌터카', n:'제주지점 (용담이동) · 반납 기한 12:00', k:'car'},
-      {t:'12:05', w:'셔틀로 제주공항 도착 · 체크인', n:'체크인 마감 12:35'},
-      {t:'13:05', w:'제주 → 김포', chip:'BX8320', n:'에어부산 · 14:25 도착', k:'fly'},
+      {t:'12:05', w:'셔틀로 제주공항 도착 · 체크인', n:'수하물 위탁 12:15까지 · 체크인 마감 12:35'},
+      {t:'13:05', w:'제주 → 김포', chip:'BX8320', n:'에어부산 · 출발 10분 전 탑승 마감 · 14:25 도착', k:'fly'},
       {t:'15:30', w:'육사 복귀'},
     ]},
   ],
@@ -695,8 +695,7 @@ let tT;function toast(t,s){const el=$('#toast');el.innerHTML=`<b>${t}</b><span>$
 /* ── e-ticket check ── */
 document.querySelectorAll('.btn.tk').forEach(a=>{
   fetch(a.href,{method:'HEAD',cache:'no-store'}).then(r=>{if(!r.ok)throw 0;}).catch(()=>{
-    a.classList.add('na');a.removeAttribute('target');
-    a.addEventListener('click',e=>{e.preventDefault();toast('E-티켓 미등록','eticket 폴더에 PDF를 올리면 여기서 열립니다.');});});
+    a.remove();});
 });
 
 /* ── boarding pass + lightbox ── */
